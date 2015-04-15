@@ -6,3 +6,4 @@ cyglink.txt
 *.hex
 *.omf
 tmp.out
+*.nbf
