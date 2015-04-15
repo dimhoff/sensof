@@ -55,6 +55,17 @@ const float fFreq = 433979050.0;
 const float fFdiv = 102; // 59 KHz @ 433.92 MHz
 
 // Frame data
+/**
+ * Frame data buffer
+ *
+ * Sensof frames as send through the air. These frames are compatible with
+ * the SI4430/EZRadioPro receiver. The following settings differ from the 
+ * default SI4430 configuration:
+ *
+ * - Header Length = 0
+ * - Fixed packet length = True
+ * - Packet length = 16
+ */
 const uint8_t code frame_data[] = {
 	//reg 0x35[7:3] (number is amount of 4-bit nibbles!!!), reg 0x70[3]
 	0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, // preamble
@@ -62,9 +73,9 @@ const uint8_t code frame_data[] = {
 	//reg 0x33[2:1], reg 0x36-0x39
 	0x2d, 0xd4,                             // sync word 3 & 2
 	//reg 0x33[6:4], reg 0x43-0x4a
-	0x11, 0x22,                             // Header 3 & 2
+	//0x11, 0x22,                             // Header 3 & 2
 	//reg 0x33[3]
-	0x10,                                   // packet len
+	//0x10,                                   // packet len
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Data
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Data
 	//reg 0x30[5,2,1:0]
@@ -72,8 +83,8 @@ const uint8_t code frame_data[] = {
 };
 #define LEN_PREAMBLE	(13)
 #define LEN_SYNC_WORD	(2)
-#define	LEN_HEADER	(2)
-#define	LEN_PLEN	(1)
+#define	LEN_HEADER	(0)
+#define	LEN_PLEN	(0)
 #define LEN_PAYLOAD	(16)
 #define LEN_CRC		(2)
 
@@ -185,7 +196,10 @@ void ezradiopro_send_frame(uint8_t *payload, uint8_t len)
 	}
 #else
 	for (i=0; i < LEN_FRAME; i++) {
+		// Invert bits, by default SI4430 has different notion of '1' and '0'
+		//TODO: can't we just fix this on receiver?
 		buf[i] ^= 0xff;
+		// Revert bits since SI4010 sends out LSB first
 		buf[i] = reverse_bits(buf[i]);
 	}
 
