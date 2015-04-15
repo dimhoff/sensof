@@ -14,30 +14,6 @@
 // """Zero out Alpha and Beta here. They have to do with the antenna.
 // Chose a nice high PA Level. This value, along with the nominal cap
 // come from the CAL SPREADSHEET"""
-#ifdef ISHUMIDITY_OOK
-const tPa_Setup code rPaSetup2 = {
-	/*.fAlpha      =*/ 0,
-	/*.fBeta       =*/ 0,
-	/*.bLevel      =*/ 60,
-	/*.bMaxDrv     =*/ 0,
-	/*.wNominalCap =*/ 256,
-};
-tPa_Setup xdata  *prPaSetup = (tPa_Setup xdata  *) &rPaSetup2;
-
-const tOds_Setup code rOdsSetup2 = {
-	/*.bModulationType =*/ 0,  // Use OOK
-	/*.bClkDiv     =*/ 5,
-	/*.bEdgeRate   =*/ 0,
-	/*.bGroupWidth =*/ 7,
-	/*.wBitRate    =*/ 417,   // Bit width in seconds = (ods_datarate*(ods_ck_div+1))/24MHz
-	/*.bLcWarmInt  =*/ 8,
-	/*.bDivWarmInt =*/ 5,
-	/*.bPaWarmInt  =*/ 4,
-};
-tOds_Setup xdata *prOdsSetup = (tOds_Setup xdata *) &rOdsSetup2;
-
-#else // ISHUMIDITY_OOK
-
 const tPa_Setup code rPaSetup2 = {
 	/*.fAlpha      =*/ 0,
 	/*.fBeta       =*/ 0,
@@ -58,8 +34,6 @@ const tOds_Setup code rOdsSetup2 = {
 	/*.bPaWarmInt  =*/ 4,
 };
 tOds_Setup xdata *prOdsSetup = (tOds_Setup xdata *) &rOdsSetup2;
-
-#endif // ISHUMIDITY_OOK
 
 const float fFreq = 433979050.0;
 const float fFdiv = 102; // 59 KHz @ 433.92 MHz
