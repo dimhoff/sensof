@@ -76,9 +76,8 @@
 //#pragma pack(1)
 struct frame_t {
 	// Encrypted Header
-	uint32_t id;
-	uint16_t cnt;
-	uint16_t _reserved1;
+	uint32_t id;  /**< Node ID, also provides integrity check */
+	uint32_t cnt; /**< Replay protection counter */
 
 	// Data
 	uint16_t temp;
@@ -120,7 +119,12 @@ void main()
 	struct frame_t fbuf;
 	unsigned char htu_failures=0;
 	unsigned char htu_measurements=0;
-	WORD pkt_cnt;
+	union {
+		// Uses union to be able to access the value as byte array without casting.
+		// This saves ~200 bytes code memory...
+		uint32_t val;
+		uint8_t bytes[4];
+	} pkt_cnt;
 
 	// Init various components
 	htu21_init();
@@ -131,9 +135,11 @@ void main()
 	// http://community.silabs.com/t5/Wireless/SI4010-demo-with-wakeup-transmit-sleep/m-p/120710/highlight/true#M818
 
 
-	// Load persistent data
-	pkt_cnt = bHvram_Read(6);
-	pkt_cnt = (pkt_cnt << 8) | bHvram_Read(7);
+	// Load Config/State
+	pkt_cnt.bytes[0] = bHvram_Read(4);
+	pkt_cnt.bytes[1] = bHvram_Read(5);
+	pkt_cnt.bytes[2] = bHvram_Read(6);
+	pkt_cnt.bytes[3] = bHvram_Read(7);
 #ifdef KEY_IN_MTP
 	key = pbMtp_Read();
 #endif
@@ -141,17 +147,19 @@ void main()
 	// Main loop
 	while ( 1 )
 	{
-		fbuf._reserved1 = 0;
-		fbuf._reserved2 = 0;
-		fbuf.id = lSys_GetProdId();
-
-		fbuf.cnt = pkt_cnt++;
-		vHvram_Write(6, pkt_cnt >> 8);
-		vHvram_Write(7, pkt_cnt & 0xff);
-
 		htu_measurements++;
 		if (htu21_read(&fbuf.temp, &fbuf.hum) == 0) {
 			BYTE key_buf[KEY_128_BIT_SIZE];
+
+			fbuf._reserved2 = 0;
+			fbuf.id = lSys_GetProdId();
+
+			// Increase packet counter and store to HVRam
+			fbuf.cnt = pkt_cnt.val++;
+			vHvram_Write(4, pkt_cnt.bytes[0]);
+			vHvram_Write(5, pkt_cnt.bytes[1]);
+			vHvram_Write(6, pkt_cnt.bytes[2]);
+			vHvram_Write(7, pkt_cnt.bytes[3]);
 
 //TODO: Currently we overwrite fbuf with encrypted data because we haven't got enough DATA ram.
 //      It would be better to have fbuf in XDATA. But then the code size becomes to big....
