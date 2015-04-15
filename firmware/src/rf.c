@@ -14,16 +14,24 @@
 // """Zero out Alpha and Beta here. They have to do with the antenna.
 // Chose a nice high PA Level. This value, along with the nominal cap
 // come from the CAL SPREADSHEET"""
-const tPa_Setup code rPaSetup2 = {
+const tPa_Setup code rPaSetup = {
 	/*.fAlpha      =*/ 0,
 	/*.fBeta       =*/ 0,
 	/*.bLevel      =*/ 60,
 	/*.bMaxDrv     =*/ 1,
 	/*.wNominalCap =*/ 192,
 };
-tPa_Setup xdata  *prPaSetup = (tPa_Setup xdata  *) &rPaSetup2;
+/**
+ * PaSetup structure pointer.
+ *
+ * Since code and xdata memory are the same it is possible to directly access 
+ * constant structures in code memory. Normally the compiler would copy the 
+ * structure from the code memory into xdata memory, causing two identical 
+ * copies to exist.
+ */
+const tPa_Setup xdata  *prPaSetup = (const tPa_Setup xdata  *) &rPaSetup; 
 
-const tOds_Setup code rOdsSetup2 = {
+const tOds_Setup code rOdsSetup = {
 	/*.bModulationType =*/ 1,  // Use FSK
 	/*.bClkDiv     =*/ 5,
 	/*.bEdgeRate   =*/ 0,
@@ -33,7 +41,15 @@ const tOds_Setup code rOdsSetup2 = {
 	/*.bDivWarmInt =*/ 5,
 	/*.bPaWarmInt  =*/ 4,
 };
-tOds_Setup xdata *prOdsSetup = (tOds_Setup xdata *) &rOdsSetup2;
+/**
+ * OdsSetup structure pointer.
+ *
+ * Since code and xdata memory are the same it is possible to directly access 
+ * constant structures in code memory. Normally the compiler would copy the 
+ * structure from the code memory into xdata memory, causing two identical 
+ * copies to exist.
+ */
+const tOds_Setup xdata *prOdsSetup = (const tOds_Setup xdata *) &rOdsSetup;
 
 const float fFreq = 433979050.0;
 const float fFdiv = 102; // 59 KHz @ 433.92 MHz
