@@ -36,14 +36,43 @@
 #include "rf.h"
 
 // Config
+/**
+ * Select where the encryption key is stored
+ *
+ * If set the MTP will hold the encryption key. The key has to be programmed
+ * into MTP using the programmer. This means the key can be changed at any 
+ * time. Downside is that the key will occupy all available MTP memory.
+ *
+ * If not set the encryption key will be hard coded into the NVRAM image. 
+ * The key is read form a file called 'key.cinc' at compile time. Having the 
+ * key in NVRAM means it can not be zeroized, and is hard to change. But it
+ * does leave MTP ram for other purposes.
+ */
 #define KEY_IN_MTP 1
+
+/**
+ * If set don't call shutdown between frames
+ *
+ * Normally the chip will shutdown between sending frames to conserve energy.
+ * However this requires that the program is stored in NVRAM. When developing
+ * the firmware is loaded through the C2 interface into RAM and will be lost 
+ * when going into shutdown.
+ *
+ * Setting this define prevents the firmware from shutting down and instead 
+ * enters a short wait loop.
+ */
 #define NO_SHUTDOWN 1
 
 
+// Defines
+#define AES_BLOCK_SIZE 16	 /**< Size of a AES encryption block */
+#define KEY_128_BIT_SIZE (128/8) /**< Size of 128-bit key in bytes */
 
-#define AES_BLOCK_SIZE 16
-#define KEY_128_BIT_SIZE (128/8)
-
+/**
+ * Sensof-HT encrypted payload structure
+ *
+ * This structure defines the fields of the encrypted payload.
+ */
 //#pragma pack(1)
 struct frame_t {
 	// Encrypted Header
