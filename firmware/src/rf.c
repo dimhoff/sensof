@@ -59,8 +59,8 @@ const float fFdiv = 102; // 59 KHz @ 433.92 MHz
  * Frame data buffer
  *
  * Sensof frames as send through the air. These frames are compatible with
- * the SI4430/EZRadioPro receiver. The following settings differ from the 
- * default SI4430 configuration:
+ * the Si4430/EZRadioPro receiver. The following settings differ from the 
+ * default Si4430 configuration:
  *
  * - Header Length = 0
  * - Fixed packet length = True
@@ -79,7 +79,7 @@ const uint8_t code frame_data[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Data
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, // Data
 	//reg 0x30[5,2,1:0]
-	0x00, 0x00                              // CRC-16
+	0x00, 0x00                              // CRC-16-IBM
 };
 #define LEN_PREAMBLE	(13)
 #define LEN_SYNC_WORD	(2)
@@ -196,10 +196,10 @@ void ezradiopro_send_frame(uint8_t *payload, uint8_t len)
 	}
 #else
 	for (i=0; i < LEN_FRAME; i++) {
-		// Invert bits, by default SI4430 has different notion of '1' and '0'
+		// Invert bits, by default Si4430 has different notion of '1' and '0'
 		//TODO: can't we just fix this on receiver?
 		buf[i] ^= 0xff;
-		// Revert bits since SI4010 sends out LSB first
+		// Revert bits since Si4010 sends out LSB first
 		buf[i] = reverse_bits(buf[i]);
 	}
 
