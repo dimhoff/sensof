@@ -61,7 +61,8 @@
  * Setting this define prevents the firmware from shutting down and instead 
  * enters a short wait loop.
  */
-#define NO_SHUTDOWN 1
+//#define NO_SHUTDOWN 1
+#undef NO_SHUTDOWN
 
 /**
  * Store packet counter in MTP
