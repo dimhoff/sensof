@@ -48,7 +48,7 @@
  * key in NVRAM means it can not be zeroized, and is hard to change. But it
  * does leave MTP ram for other purposes.
  */
-#define KEY_IN_MTP 1
+//#define KEY_IN_MTP 1
 
 /**
  * If set don't call shutdown between frames
@@ -63,10 +63,25 @@
  */
 #define NO_SHUTDOWN 1
 
+/**
+ * Store packet counter in MTP
+ *
+ * Store part of the packet counter to MTP to guarantee that counter is always
+ * higher then previous time. Else the receiver will think the packet is 
+ * replayed.
+ *
+ * To be able to use this the key can not be stored in MTP.
+ */
+#define PKT_CNT_IN_MTP 1
+
+#if defined(PKT_CNT_IN_MTP) && defined(KEY_IN_MTP)
+#error "Options KEY_IN_MTP and PKT_CNT_IN_MTP are mutually exclusive"
+#endif
 
 // Defines
 #define AES_BLOCK_SIZE 16	 /**< Size of a AES encryption block */
 #define KEY_128_BIT_SIZE (128/8) /**< Size of 128-bit key in bytes */
+#define MTP_CTR_24BIT 4		 /**< Magic value to indicate MTP counter is 24-bit */
 
 /**
  * Sensof-HT encrypted payload structure
@@ -136,10 +151,25 @@ void main()
 
 
 	// Load Config/State
-	pkt_cnt.bytes[0] = bHvram_Read(4);
-	pkt_cnt.bytes[1] = bHvram_Read(5);
-	pkt_cnt.bytes[2] = bHvram_Read(6);
-	pkt_cnt.bytes[3] = bHvram_Read(7);
+	if ((SYSGEN & M_POWER_1ST_TIME)) {
+#ifdef PKT_CNT_IN_MTP
+		pbMtp_Read();
+		vMtp_IncCount(0, MTP_CTR_24BIT);
+		pkt_cnt.val = lMtp_GetDecCount(0, MTP_CTR_24BIT) << 8;
+		bMtp_Write(40); // ignore result since we cant do anything about it.
+#else
+		pkt_cnt.val = 0;
+#endif
+		vHvram_Write(4, pkt_cnt.bytes[0]);
+		vHvram_Write(5, pkt_cnt.bytes[1]);
+		vHvram_Write(6, pkt_cnt.bytes[2]);
+		vHvram_Write(7, pkt_cnt.bytes[3]);
+	} else {
+		pkt_cnt.bytes[0] = bHvram_Read(4);
+		pkt_cnt.bytes[1] = bHvram_Read(5);
+		pkt_cnt.bytes[2] = bHvram_Read(6);
+		pkt_cnt.bytes[3] = bHvram_Read(7);
+	}
 #ifdef KEY_IN_MTP
 	key = pbMtp_Read();
 #endif
@@ -160,6 +190,14 @@ void main()
 			vHvram_Write(5, pkt_cnt.bytes[1]);
 			vHvram_Write(6, pkt_cnt.bytes[2]);
 			vHvram_Write(7, pkt_cnt.bytes[3]);
+#ifdef PKT_CNT_IN_MTP
+
+			if (pkt_cnt.bytes[3] == 0) {
+				pbMtp_Read();
+				vMtp_IncCount(0, MTP_CTR_24BIT);
+				bMtp_Write(40); // ignore result since we cant do anything about it.
+			}
+#endif // PKT_CNT_IN_MTP
 
 //TODO: Currently we overwrite fbuf with encrypted data because we haven't got enough DATA ram.
 //      It would be better to have fbuf in XDATA. But then the code size becomes to big....
