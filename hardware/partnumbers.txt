@@ -1,0 +1,15 @@
+Numbering scheme: 
+
+  PPPP-pp-rr
+
+Where:
+ - PPPP: Project number
+ - pp: Part number(eg. pcb, casing, stencil are parts)
+ - rr: Revision of part
+
+
+Project number: 0002
+
+Parts:
+00 - Main PCB
+01 - Top layer solder stencil
