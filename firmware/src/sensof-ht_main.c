@@ -142,6 +142,12 @@ void main()
 		uint8_t bytes[4];
 	} pkt_cnt;
 
+	// Disable the Matrix and Roff modes on GPIO[3:1]
+	// TODO: does this need to be done every boot??? SiLabs examples do...
+	PORT_CTRL &= ~(M_PORT_MATRIX | M_PORT_ROFF | M_PORT_STROBE);
+	PORT_CTRL |=  M_PORT_STROBE;
+	PORT_CTRL &= (~M_PORT_STROBE);
+
 	// Init various components
 	htu21_init();
 	rf_setup();

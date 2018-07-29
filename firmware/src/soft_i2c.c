@@ -11,8 +11,8 @@
 #endif
 #include "timing_si4010.h"
 
-#define SCL	GPIO6
-#define SDA	GPIO7
+#define SCL	GPIO1
+#define SDA	GPIO2
 
 unsigned char i2c_flags = 0;
 
