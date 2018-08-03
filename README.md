@@ -6,7 +6,24 @@ Sensof-HT is a temperature and humidity sensor that is build using a Si4010 MCU
 and a HTU21 sensor.
 
 ## Circuit diagram
-TODO:
+The Si4010 connects to a HTU21D, Si7020 or compatible sensor through I2C. The
+I2C bus is connected to the Si4010 on the following pins:
+
+   GPIO1 = SCL
+   GPIO2 = SDA
+
+Voltage level should be between 3.6 - 1.9 Volt. A 3V CR2032 works fine.
+
+Some ready made Si4010 and HTU21D or Si7020 sensor are available on the
+internet. These only need to be connected together and connected to a battery.
+
+This repository also contains a custom Sensof-HT PCB. However this is currently
+still under development.
+
+## Receiver
+I currently use a RFM22B module from modtronicsaustralia.com connected to a
+Raspberry Pi. This is a Si4430 based transceiver module. For the source code of
+the receiving program see the src/si443x_sensof directory.
 
 # Sensof Frame Format
 The Sensof frames are compatible with the Si4430/EZRadioPro receiver, and have
@@ -23,7 +40,7 @@ encrypted block, see [Encrypted Payload].
 ## Encrypted Payload
 The payload is encrypted using AES-128 in ECB mode. To make this secure
 against various attacks some mandatory field within the encrypted block have
-been defined. The payload is formated as follows:
+been defined. The payload is formatted as follows:
 
     +---------+----------+------------------+
     | Dev. ID | Frame ID | Application data |
