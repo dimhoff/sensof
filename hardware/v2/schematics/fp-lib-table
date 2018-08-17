@@ -1,0 +1,7 @@
+(fp_lib_table
+  (lib (name Linx_BAT-HLD-001)(type KiCad)(uri "$(KIPRJMOD)/Linx_BAT-HLD-001.pretty")(options "")(descr ""))
+  (lib (name silabs_0402)(type KiCad)(uri "$(KIPRJMOD)/silabs_0402.pretty")(options "")(descr ""))
+  (lib (name DI_Logo)(type KiCad)(uri "$(KIPRJMOD)/DI_Logo.pretty")(options "")(descr ""))
+  (lib (name Measurement_Point_Round-SMD-Pad_Small-Labeled)(type KiCad)(uri "$(KIPRJMOD)/Measurement_Point_Round-SMD-Pad_Small-Labeled.pretty")(options "")(descr ""))
+  (lib (name silabs_cr2032)(type KiCad)(uri "$(KIPRJMOD)/silabs_cr2032.pretty")(options "")(descr "CR2032 footprint from the 4010-DKMX-434 reference design"))
+)

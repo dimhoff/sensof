@@ -1,0 +1,11 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Si4010-GS
+D SI4010-C2 Crystal-less SOC RF Transmitter (SOIC-14)
+$ENDCMP
+#
+$CMP Si4010-GT
+D SI4010-C2 Crystal-less SOC RF Transmitter (MSOP-10)
+$ENDCMP
+#
+#End Doc Library
