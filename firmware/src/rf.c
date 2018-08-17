@@ -10,17 +10,40 @@
 
 // Transmission parameters
 
-// PA Alpha and Beta from fcast_demo program:
-// """Zero out Alpha and Beta here. They have to do with the antenna.
-// Chose a nice high PA Level. This value, along with the nominal cap
-// come from the CAL SPREADSHEET"""
+// Values are calculated with si4010_calc_regs_110107.ods. Used input data:
+// Package: 10-pin MSOP
+//
+// Antenna:
+// - Alpha: 0 (we don't mind radiant power fluctuation over temperature)
+// - Approx. Eff: 35 % (from ACAG1204-433-T-1314083.pdf datasheet)
+// - Reactance change: 15 % (default)
+// - Manual Impedance: no
+//
+// Power Amplifier Setup:
+// - Total PA Power: 10 dBm (Above this sheet starts to complain)
+// - Max Radiant Power
+// - Center Freq: 433.92 MHz (Center of 433/434 ISM band)
+// - Nom. Cap Word: 23 (from AN369: SI4010 Antenna Interface and Matching Network Guide")
+// - External diff Cap: 0
+//
+// Serializer Setup:
+// - Data rate: 9.6 kbits/s
+// - Encoding: NRZ Only (eg. no encoding)
+// - Modulation: FSK
+// - FSK Deviation: 59 kHz
+//
+// Calculated Values:
+// - Actual symbol rate: 9.59 kbit/s
+// - Expected deviation: 59.05 kHz
+
 const tPa_Setup code rPaSetup = {
 	/*.fAlpha      =*/ 0,
-	/*.fBeta       =*/ 0,
-	/*.bLevel      =*/ 60,
+	/*.fBeta       =*/ 0.2455, // Calculated: 0.2455 (MSOP), 0.2499 (SOIC)
+	/*.bLevel      =*/ 127, // Calculated: 75
 	/*.bMaxDrv     =*/ 1,
-	/*.wNominalCap =*/ 192,
+	/*.wNominalCap =*/ 23,
 };
+
 /**
  * PaSetup structure pointer.
  *
