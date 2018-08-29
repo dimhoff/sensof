@@ -1,6 +1,6 @@
 (fp_lib_table
-  (lib (name Linx_BAT-HLD-001)(type KiCad)(uri "$(KIPRJMOD)/Linx_BAT-HLD-001.pretty")(options "")(descr ""))
-  (lib (name Abracon_ACAG1204-433-T)(type KiCad)(uri "$(KIPRJMOD)/Abracon_ACAG1204-433-T.pretty")(options "")(descr ""))
-  (lib (name silabs_0402)(type KiCad)(uri "$(KIPRJMOD)/silabs_0402.pretty")(options "")(descr ""))
-  (lib (name DI_Logo)(type KiCad)(uri "$(KIPRJMOD)/DI_Logo.pretty")(options "")(descr ""))
+  (lib (name Linx_BAT-HLD-001)(type KiCad)(uri "$(KIPRJMOD)/../../di_kicad_library/modules/Linx_BAT-HLD-001.pretty")(options "")(descr "Linx CR2032 battery holder"))
+  (lib (name Abracon_ACAG1204-433-T)(type KiCad)(uri "$(KIPRJMOD)/../../di_kicad_library/modules/Abracon_ACAG1204-433-T.pretty")(options "")(descr "Abracon Ceramic 433 MHz antenna"))
+  (lib (name silabs_0402)(type KiCad)(uri "$(KIPRJMOD)/../../di_kicad_library/modules/silabs_0402.pretty")(options "")(descr "Si4010 reference design compatible 0402 footprints"))
+  (lib (name DI_Logo)(type KiCad)(uri "$(KIPRJMOD)/../../di_kicad_library/modules/DI_Logo.pretty")(options "")(descr "My Logo"))
 )

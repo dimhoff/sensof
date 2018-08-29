@@ -1,4 +1,3 @@
 (sym_lib_table
-  (lib (name htu21d)(type Legacy)(uri ${KIPRJMOD}/htu21d.lib)(options "")(descr ""))
-  (lib (name si4010)(type Legacy)(uri ${KIPRJMOD}/si4010.lib)(options "")(descr ""))
+  (lib (name si4010)(type Legacy)(uri ${KIPRJMOD}/../../di_kicad_library/library/si4010.lib)(options "")(descr "Si4010 ISM-band transmitter"))
 )
