@@ -7,23 +7,30 @@
 #include "si4010_api_rom.h"
 #include "crc.h"
 
+#ifndef BOARD_VERSION
+#define BOARD_VERSION 2
+#endif
 
 // Transmission parameters
 
 // Values are calculated with si4010_calc_regs_110107.ods. Used input data:
-// Package: 10-pin MSOP
+// Package: v1: 10-pin MSOP; v2: 14-pin SOIC
 //
 // Antenna:
 // - Alpha: 0 (we don't mind radiant power fluctuation over temperature)
-// - Approx. Eff: 35 % (from ACAG1204-433-T-1314083.pdf datasheet)
+// - Approx. Eff:
+//   - v1: 35 % (from ACAG1204-433-T-1314083.pdf datasheet) 
+//   - v2: 12.5 % (default)
 // - Reactance change: 15 % (default)
 // - Manual Impedance: no
 //
 // Power Amplifier Setup:
-// - Total PA Power: 10 dBm (Above this sheet starts to complain)
+// - Total PA Power: 10.5 dBm (Above this sheet starts to complain)
 // - Max Radiant Power
 // - Center Freq: 433.92 MHz (Center of 433/434 ISM band)
-// - Nom. Cap Word: 23 (from AN369: SI4010 Antenna Interface and Matching Network Guide")
+// - Nom. Cap Word: 
+//   - v1: 23 (from AN369: SI4010 Antenna Interface and Matching Network Guide")
+//   - v2: 80 (from AN369: SI4010 Antenna Interface and Matching Network Guide")
 // - External diff Cap: 0
 //
 // Serializer Setup:
@@ -37,11 +44,21 @@
 // - Expected deviation: 59.05 kHz
 
 const tPa_Setup code rPaSetup = {
+#if BOARD_VERSION==1 // Sensof v1 - Ceramic antenna
 	/*.fAlpha      =*/ 0,
-	/*.fBeta       =*/ 0.2455, // Calculated: 0.2455 (MSOP), 0.2499 (SOIC)
-	/*.bLevel      =*/ 127, // Calculated: 75
+	/*.fBeta       =*/ 0.2455, // Calculated: 0.2455 (MSOP-10), 0.2499 (SOIC-14)
+	/*.bLevel      =*/ 76, // Max according to sheet is: 76 @ max. drv.
 	/*.bMaxDrv     =*/ 1,
 	/*.wNominalCap =*/ 23,
+#elif BOARD_VERSION==2 // Sensof v2 - PCB antenna
+	/*.fAlpha      =*/ 0,
+	/*.fBeta       =*/ 0.1755, // Calculated: 0.1674 (MSOP-10), 0.1755 (SOIC-14)
+	/*.bLevel      =*/ 76, // Max according to sheet is: 76 @ max. drv.
+	/*.bMaxDrv     =*/ 1,
+	/*.wNominalCap =*/ 80,
+#else
+#error "BOARD_VERSION incorrect or not defined"
+#endif
 };
 
 /**
