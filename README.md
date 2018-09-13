@@ -18,7 +18,7 @@ Some ready made Si4010 and HTU21D or Si7020 sensor are available on the
 internet. These only need to be connected together and connected to a battery.
 
 This repository also contains a custom Sensof-HT PCB. However this is currently
-still under development.
+still under development. See hardware/README.md for more information.
 
 ## Receiver
 I currently use a RFM22B module from modtronicsaustralia.com connected to a
