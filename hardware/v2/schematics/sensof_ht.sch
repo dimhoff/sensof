@@ -25,6 +25,7 @@ F 3 "" H 3300 3700 50  0001 C CNN
 F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
 F 5 "GJM1555C1H2R7BB01D" H 0   0   50  0001 C CNN "Mfr. No"
 F 6 "81-GJM1555C1H2R7BB01" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "±5%; C0G (based on 4010-DKMX-434_BOM.xls)" H 3300 3700 50  0001 C CNN "Requirements"
 	1    3300 3700
 	-1   0    0    1   
 $EndComp
@@ -39,6 +40,7 @@ F 3 "" H 3300 3300 50  0001 C CNN
 F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
 F 5 "LQW15CNR22J10D" H 0   0   50  0001 C CNN "Mfr. No"
 F 6 "81-LQW15CNR22J10D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "Coilcraft 0402HP-220NX_LU" H 3300 3300 50  0001 C CNN "Requirements"
 	1    3300 3300
 	1    0    0    -1  
 $EndComp
