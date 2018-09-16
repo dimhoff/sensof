@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Sensof HT v2"
-Date "2018-09-13"
+Date "2018-09-16"
 Rev "01"
 Comp "Copyright (c) 2018, David Imhoff <dimhoff.devel@gmail.com>"
 Comment1 "License: BSD-3-Clause"
@@ -22,6 +22,9 @@ F 0 "C1" H 3100 3650 50  0000 L CNN
 F 1 "2.7pF" H 3000 3750 50  0000 L CNN
 F 2 "silabs_0402:C_0402" H 3338 3550 50  0001 C CNN
 F 3 "" H 3300 3700 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "GJM1555C1H2R7BB01D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-GJM1555C1H2R7BB01" H 0   0   50  0001 C CNN "Mouser No"
 	1    3300 3700
 	-1   0    0    1   
 $EndComp
@@ -33,6 +36,9 @@ F 0 "L1" H 3400 3350 50  0000 C CNN
 F 1 "220nH" H 3450 3250 50  0000 C CNN
 F 2 "silabs_0402:C_0402" H 3300 3300 50  0001 C CNN
 F 3 "" H 3300 3300 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "LQW15CNR22J10D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-LQW15CNR22J10D" H 0   0   50  0001 C CNN "Mouser No"
 	1    3300 3300
 	1    0    0    -1  
 $EndComp
@@ -66,6 +72,9 @@ F 0 "C3" H 5525 2450 50  0000 L CNN
 F 1 "2.2uF" H 5525 2250 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5538 2200 50  0001 C CNN
 F 3 "" H 5500 2350 50  0001 C CNN
+F 4 "Taiyo Yuden" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "LMK107BJ225KAHT" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "963-LMK107BJ225KAHT" H 0   0   50  0001 C CNN "Mouser No"
 	1    5500 2350
 	1    0    0    -1  
 $EndComp
@@ -77,6 +86,9 @@ F 0 "C4" H 5775 2450 50  0000 L CNN
 F 1 "1nF" H 5775 2250 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5788 2200 50  0001 C CNN
 F 3 "" H 5750 2350 50  0001 C CNN
+F 4 "KEMET" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "C0603C102J5RACTU" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "80-C0603C102J5R" H 0   0   50  0001 C CNN "Mouser No"
 	1    5750 2350
 	1    0    0    -1  
 $EndComp
@@ -99,6 +111,9 @@ F 0 "C5" H 6025 2450 50  0000 L CNN
 F 1 "270pF" H 6025 2250 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 6038 2200 50  0001 C CNN
 F 3 "" H 6000 2350 50  0001 C CNN
+F 4 "Yageo" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "CC0603JRX7R9BB271" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "603-CC603JRX7R9BB271" H 0   0   50  0001 C CNN "Mouser No"
 	1    6000 2350
 	1    0    0    -1  
 $EndComp
@@ -110,6 +125,9 @@ F 0 "U2" H 8050 3650 60  0000 C CNN
 F 1 "HTU21D/Si7020" H 8600 3150 60  0000 C CNN
 F 2 "Housings_DFN_QFN:DFN-6-1EP_3x3mm_Pitch0.95mm" H 8050 3400 60  0001 C CNN
 F 3 "" H 8050 3400 60  0001 C CNN
+F 4 "TE Connectivity" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "HTU21DF" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "824-HPP845E131R5" H 0   0   50  0001 C CNN "Mouser No"
 	1    8050 3400
 	1    0    0    -1  
 $EndComp
@@ -143,6 +161,9 @@ F 0 "R2" H 7150 3000 50  0000 C CNN
 F 1 "10k" H 7150 3100 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 6930 3050 50  0001 C CNN
 F 3 "" H 7000 3050 50  0001 C CNN
+F 4 "Yageo" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "RE0603FRE0710KL" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "603-RE0603FRE0710KL" H 0   0   50  0001 C CNN "Mouser No"
 	1    7000 3050
 	1    0    0    -1  
 $EndComp
@@ -154,6 +175,9 @@ F 0 "R1" H 6850 3000 50  0000 C CNN
 F 1 "10k" H 6850 3100 50  0000 C CNN
 F 2 "Resistors_SMD:R_0603" V 6630 3050 50  0001 C CNN
 F 3 "" H 6700 3050 50  0001 C CNN
+F 4 "Yageo" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "RE0603FRE0710KL" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "603-RE0603FRE0710KL" H 0   0   50  0001 C CNN "Mouser No"
 	1    6700 3050
 	1    0    0    -1  
 $EndComp
@@ -176,6 +200,9 @@ F 0 "BT1" H 3850 5000 50  0000 L CNN
 F 1 "CR2032" H 3850 4900 50  0000 L CNN
 F 2 "silabs_cr2032:silabs_cr2032" V 3750 4960 50  0001 C CNN
 F 3 "" V 3750 4960 50  0001 C CNN
+F 4 "Linx Technologies" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "BAT-HLD-001" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "712-BAT-HLD-001" H 0   0   50  0001 C CNN "Mouser No"
 	1    3750 4900
 	1    0    0    -1  
 $EndComp
@@ -209,6 +236,9 @@ F 0 "C6" H 8375 2850 50  0000 L CNN
 F 1 "100nF" H 8375 2650 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 8388 2600 50  0001 C CNN
 F 3 "" H 8350 2750 50  0001 C CNN
+F 4 "Yageo" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "CC0603KRX7R6BB104" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "603-CC603KRX7R6BB104" H 0   0   50  0001 C CNN "Mouser No"
 	1    8350 2750
 	1    0    0    -1  
 $EndComp
@@ -253,6 +283,9 @@ F 0 "C2" H 3800 3450 50  0000 L CNN
 F 1 "N.F." H 3700 3550 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 4038 3350 50  0001 C CNN
 F 3 "" H 4000 3500 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    4000 3500
 	-1   0    0    1   
 $EndComp
@@ -405,6 +438,9 @@ F 0 "TP1" V 7600 4350 50  0001 L CNN
 F 1 "VCC" V 7600 4350 50  0000 L CNN
 F 2 "Measurement_Point_Round-SMD-Pad_Small-Labeled:Measurement_Point_Round-SMD-Pad_Small-Labeled" H 7800 4150 50  0001 C CNN
 F 3 "" H 7800 4150 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    7600 4150
 	0    1    1    0   
 $EndComp
@@ -416,6 +452,9 @@ F 0 "TP2" V 7600 4500 50  0001 L CNN
 F 1 "SDA" V 7600 4500 50  0000 L CNN
 F 2 "Measurement_Point_Round-SMD-Pad_Small-Labeled:Measurement_Point_Round-SMD-Pad_Small-Labeled" H 7800 4300 50  0001 C CNN
 F 3 "" H 7800 4300 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    7600 4300
 	0    1    1    0   
 $EndComp
@@ -427,6 +466,9 @@ F 0 "TP3" V 7600 4650 50  0001 L CNN
 F 1 "SCL" V 7600 4650 50  0000 L CNN
 F 2 "Measurement_Point_Round-SMD-Pad_Small-Labeled:Measurement_Point_Round-SMD-Pad_Small-Labeled" H 7800 4450 50  0001 C CNN
 F 3 "" H 7800 4450 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    7600 4450
 	0    1    1    0   
 $EndComp
@@ -438,6 +480,9 @@ F 0 "TP4" V 7600 4800 50  0001 L CNN
 F 1 "GPIO0" V 7600 4800 50  0000 L CNN
 F 2 "Measurement_Point_Round-SMD-Pad_Small-Labeled:Measurement_Point_Round-SMD-Pad_Small-Labeled" H 7800 4600 50  0001 C CNN
 F 3 "" H 7800 4600 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    7600 4600
 	0    1    1    0   
 $EndComp
@@ -449,6 +494,9 @@ F 0 "TP5" V 7600 4950 50  0001 L CNN
 F 1 "GPIO3" V 7600 4950 50  0000 L CNN
 F 2 "Measurement_Point_Round-SMD-Pad_Small-Labeled:Measurement_Point_Round-SMD-Pad_Small-Labeled" H 7800 4750 50  0001 C CNN
 F 3 "" H 7800 4750 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    7600 4750
 	0    1    1    0   
 $EndComp
@@ -460,6 +508,9 @@ F 0 "TP6" V 7600 5100 50  0001 L CNN
 F 1 "C2D" V 7600 5100 50  0000 L CNN
 F 2 "Measurement_Point_Round-SMD-Pad_Small-Labeled:Measurement_Point_Round-SMD-Pad_Small-Labeled" H 7800 4900 50  0001 C CNN
 F 3 "" H 7800 4900 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    7600 4900
 	0    1    1    0   
 $EndComp
@@ -471,6 +522,9 @@ F 0 "TP7" V 7600 5250 50  0001 L CNN
 F 1 "C2CK" V 7600 5250 50  0000 L CNN
 F 2 "Measurement_Point_Round-SMD-Pad_Small-Labeled:Measurement_Point_Round-SMD-Pad_Small-Labeled" H 7800 5050 50  0001 C CNN
 F 3 "" H 7800 5050 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    7600 5050
 	0    1    1    0   
 $EndComp
@@ -482,6 +536,9 @@ F 0 "TP8" V 7600 5400 50  0001 L CNN
 F 1 "GND" V 7600 5400 50  0000 L CNN
 F 2 "Measurement_Point_Round-SMD-Pad_Small-Labeled:Measurement_Point_Round-SMD-Pad_Small-Labeled" H 7800 5200 50  0001 C CNN
 F 3 "" H 7800 5200 50  0001 C CNN
+F 4 "-" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "-" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "-" H 0   0   50  0001 C CNN "Mouser No"
 	1    7600 5200
 	0    1    1    0   
 $EndComp
@@ -552,6 +609,9 @@ F 0 "U1" H 5350 4300 60  0000 C CNN
 F 1 "Si4010-GS" H 5700 2900 60  0000 C CNN
 F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 5400 3000 60  0001 C CNN
 F 3 "" H 5400 3000 60  0001 C CNN
+F 4 "Silicon Labs" H 5350 3550 50  0001 C CNN "Manufacturer"
+F 5 "SI4010-C2-GS" H 5350 3550 50  0001 C CNN "Mfr. No"
+F 6 "634-SI4010-C2-GS" H 5350 3550 50  0001 C CNN "Mouser No"
 	1    5350 3550
 	1    0    0    -1  
 $EndComp
