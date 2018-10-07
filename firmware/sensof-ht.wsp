@@ -2461,7 +2461,7 @@ AssFormat=<Executable Name> <Input File(s)> <Flags>
 [WorkState_v1_1.Compiler]
 Compiler=C:\Keil\C51\BIN\C51.exe
 [WorkState_v1_1.CompFlag]
-CompFlag=DB OE BR BROWSE NOAREGS NOINTPROMOTE INCDIR(..\src;..\common\src) DEBUG OBJECTEXTEND CODE SYMBOLS
+CompFlag=DB OE BR NOAREGS NOIP INCDIR(..\src;..\common\src) CD SB
 [WorkState_v1_1.CompFormat]
 CompFormat=<Executable Name> <Input File(s)> <Flags> 
 [WorkState_v1_1.RunOptimizer]
