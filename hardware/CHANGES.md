@@ -21,6 +21,7 @@
 ## 0003-00-01
  * Upgraded to KiCad 5.0
  * Switched to di_kicad_library repository for symbols & footprints
+ * Change test pad positions
 
 
 # 0003-01: Top layer solder stencil
