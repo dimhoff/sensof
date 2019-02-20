@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:sensof_ht-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -22,6 +21,10 @@ F 0 "C5" H 3150 3650 50  0000 L CNN
 F 1 "2.7pF" H 3050 3750 50  0000 L CNN
 F 2 "silabs_0402:C_0402" H 3388 3550 50  0001 C CNN
 F 3 "" H 3350 3700 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "GRM1555C1H2R7BA01D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-GRM1555C1H2R7BA1D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "±5%; C0G (based on 4010-DKPB434-BM_BOM.xls)" H 0   0   50  0001 C CNN "Note"
 	1    3350 3700
 	-1   0    0    1   
 $EndComp
@@ -33,6 +36,10 @@ F 0 "C3" V 2350 2900 50  0000 L CNN
 F 1 "4.3pF" V 2650 2850 50  0000 L CNN
 F 2 "silabs_0402:C_0402" H 2538 2800 50  0001 C CNN
 F 3 "" H 2500 2950 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "GRM1555C1E4R3BA01D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-GRM1555C1E4R3BA1D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "±5%; C0G (based on 4010-DKPB434-BM_BOM.xls)" H 0   0   50  0001 C CNN "Note"
 	1    2500 2950
 	0    1    1    0   
 $EndComp
@@ -44,6 +51,10 @@ F 0 "C2" H 2175 4600 50  0000 L CNN
 F 1 "6.8pF" H 2175 4400 50  0000 L CNN
 F 2 "silabs_0402:C_0402" H 2188 4350 50  0001 C CNN
 F 3 "" H 2150 4500 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "GRM1555C1E6R8BA01D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-GRM1555C1E6R8BA1D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "±5%; C0G (based on 4010-DKPB434-BM_BOM.xls)" H 0   0   50  0001 C CNN "Note"
 	1    2150 4500
 	1    0    0    -1  
 $EndComp
@@ -55,6 +66,10 @@ F 0 "C4" H 2775 4600 50  0000 L CNN
 F 1 "6.8pF" H 2775 4400 50  0000 L CNN
 F 2 "silabs_0402:C_0402" H 2788 4350 50  0001 C CNN
 F 3 "" H 2750 4500 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "GRM1555C1E6R8BA01D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-GRM1555C1E6R8BA1D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "±5%; C0G (based on 4010-DKPB434-BM_BOM.xls)" H 0   0   50  0001 C CNN "Note"
 	1    2750 4500
 	1    0    0    -1  
 $EndComp
@@ -66,6 +81,10 @@ F 0 "C1" V 1700 4200 50  0000 L CNN
 F 1 "270pF" V 2000 4150 50  0000 L CNN
 F 2 "silabs_0402:C_0402" H 1888 4100 50  0001 C CNN
 F 3 "" H 1850 4250 50  0001 C CNN
+F 4 "Murata" V 1850 4250 50  0001 C CNN "Manufacturer"
+F 5 "GRM1555C1H271JA01J" V 1850 4250 50  0001 C CNN "Mfr. No"
+F 6 "81-GRM1555C1H271JA1J" V 1850 4250 50  0001 C CNN "Mouser No"
+F 7 "±5%; C0G (based on 4010-DKPB434-BM_BOM.xls)" V 1850 4250 50  0001 C CNN "Note"
 	1    1850 4250
 	0    1    1    0   
 $EndComp
@@ -77,6 +96,10 @@ F 0 "C6" V 3250 4200 50  0000 L CNN
 F 1 "1.8pF" V 3550 4150 50  0000 L CNN
 F 2 "silabs_0402:C_0402" H 3438 4100 50  0001 C CNN
 F 3 "" H 3400 4250 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "GRM1555C1H1R8WA01D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-GRM1555C1H1R8WA1D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "±5%; C0G (based on 4010-DKPB434-BM_BOM.xls)" H 0   0   50  0001 C CNN "Note"
 	1    3400 4250
 	0    1    1    0   
 $EndComp
@@ -88,6 +111,10 @@ F 0 "L4" H 3800 3800 50  0000 C CNN
 F 1 "16nH" H 3850 3700 50  0000 C CNN
 F 2 "silabs_0402:C_0402" H 3700 3750 50  0001 C CNN
 F 3 "" H 3700 3750 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "LQW15AN16NJ80D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-LQW15AN16NJ80D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "See sensof_ht-BOM.ods:‘Inductor Selection’ tab" H 0   0   50  0001 C CNN "Note"
 	1    3700 3750
 	1    0    0    -1  
 $EndComp
@@ -99,6 +126,10 @@ F 0 "L3" H 3800 3400 50  0000 C CNN
 F 1 "16nH" H 3850 3300 50  0000 C CNN
 F 2 "silabs_0402:C_0402" H 3700 3350 50  0001 C CNN
 F 3 "" H 3700 3350 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "LQW15AN16NJ80D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-LQW15AN16NJ80D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "See sensof_ht-BOM.ods:‘Inductor Selection’ tab" H 0   0   50  0001 C CNN "Note"
 	1    3700 3350
 	1    0    0    -1  
 $EndComp
@@ -110,6 +141,10 @@ F 0 "L5" H 4150 3400 50  0000 C CNN
 F 1 "220nH" H 4200 3300 50  0000 C CNN
 F 2 "silabs_0402:C_0402" H 4050 3350 50  0001 C CNN
 F 3 "" H 4050 3350 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "LQW15CNR22J10D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-LQW15CNR22J10D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "See sensof_ht-BOM.ods:‘Inductor Selection’ tab" H 0   0   50  0001 C CNN "Note"
 	1    4050 3350
 	1    0    0    -1  
 $EndComp
@@ -121,6 +156,10 @@ F 0 "L2" H 3000 3600 50  0000 C CNN
 F 1 "56nH" H 3050 3500 50  0000 C CNN
 F 2 "silabs_0402:C_0402" H 2900 3550 50  0001 C CNN
 F 3 "" H 2900 3550 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "LQW15AN56NJ80D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-LQW15AN56NJ80D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "See sensof_ht-BOM.ods:‘Inductor Selection’ tab" H 0   0   50  0001 C CNN "Note"
 	1    2900 3550
 	1    0    0    -1  
 $EndComp
@@ -132,6 +171,10 @@ F 0 "L1" V 2400 4250 50  0000 C CNN
 F 1 "18nH" V 2525 4250 50  0000 C CNN
 F 2 "silabs_0402:C_0402" H 2450 4250 50  0001 C CNN
 F 3 "" H 2450 4250 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "LQW15AN18NJ80D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-LQW15AN18NJ80D" H 0   0   50  0001 C CNN "Mouser No"
+F 7 "See sensof_ht-BOM.ods:‘Inductor Selection’ tab" H 0   0   50  0001 C CNN "Note"
 	1    2450 4250
 	0    1    1    0   
 $EndComp
@@ -143,6 +186,9 @@ F 0 "C7" H 5625 2350 50  0000 L CNN
 F 1 "2.2uF" H 5625 2150 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603" H 5638 2100 50  0001 C CNN
 F 3 "" H 5600 2250 50  0001 C CNN
+F 4 "Wurth Electronics" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "885012106018" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "710-885012106018" H 0   0   50  0001 C CNN "Mouser No"
 	1    5600 2250
 	1    0    0    -1  
 $EndComp
@@ -154,6 +200,9 @@ F 0 "C8" H 5875 2350 50  0000 L CNN
 F 1 "1nF" H 5875 2150 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0402" H 5888 2100 50  0001 C CNN
 F 3 "" H 5850 2250 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "GRM1555C1H102JA01D" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-GRM1555C1H102JA1D" H 0   0   50  0001 C CNN "Mouser No"
 	1    5850 2250
 	1    0    0    -1  
 $EndComp
@@ -165,6 +214,9 @@ F 0 "C9" H 6125 2350 50  0000 L CNN
 F 1 "270pF" H 6125 2150 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0402" H 6138 2100 50  0001 C CNN
 F 3 "" H 6100 2250 50  0001 C CNN
+F 4 "Murata" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "GRM1555C1H271JA01J" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "81-GRM1555C1H271JA1J" H 0   0   50  0001 C CNN "Mouser No"
 	1    6100 2250
 	1    0    0    -1  
 $EndComp
@@ -176,6 +228,9 @@ F 0 "U2" H 9050 3650 60  0000 C CNN
 F 1 "HTU21D/Si7020" H 9250 3150 60  0000 C CNN
 F 2 "Housings_DFN_QFN:DFN-6-1EP_3x3mm_Pitch0.95mm" H 8700 3400 60  0001 C CNN
 F 3 "" H 8700 3400 60  0001 C CNN
+F 4 "Silicon Labs" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "SI7020-A20-GM1" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "634-SI7020-A20-GM1" H 0   0   50  0001 C CNN "Mouser No"
 	1    8700 3400
 	1    0    0    -1  
 $EndComp
@@ -187,6 +242,9 @@ F 0 "R2" H 7800 3000 50  0000 C CNN
 F 1 "10k" H 7800 3100 50  0000 C CNN
 F 2 "Resistors_SMD:R_0402" V 7580 3050 50  0001 C CNN
 F 3 "" H 7650 3050 50  0001 C CNN
+F 4 "Vishay" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "CRCW040210K0FKEDC" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "71-CRCW040210K0FKEDC" H 0   0   50  0001 C CNN "Mouser No"
 	1    7650 3050
 	1    0    0    -1  
 $EndComp
@@ -198,6 +256,9 @@ F 0 "R1" H 7500 3000 50  0000 C CNN
 F 1 "10k" H 7500 3100 50  0000 C CNN
 F 2 "Resistors_SMD:R_0402" V 7280 3050 50  0001 C CNN
 F 3 "" H 7350 3050 50  0001 C CNN
+F 4 "Vishay" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "CRCW040210K0FKEDC" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "71-CRCW040210K0FKEDC" H 0   0   50  0001 C CNN "Mouser No"
 	1    7350 3050
 	1    0    0    -1  
 $EndComp
@@ -209,6 +270,9 @@ F 0 "J1" V 6500 4500 50  0000 C CNN
 F 1 "Conn_01x06" V 6600 4500 50  0000 C CNN
 F 2 "Connectors_JST:JST_SH_SM06B-SRSS-TB_06x1.00mm_Angled" H 6400 4550 50  0001 C CNN
 F 3 "" H 6400 4550 50  0001 C CNN
+F 4 "SparkFun" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "PRT-10210" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "474-PRT-10210" H 0   0   50  0001 C CNN "Mouser No"
 	1    6400 4550
 	0    -1   1    0   
 $EndComp
@@ -242,6 +306,9 @@ F 0 "C10" H 8925 2800 50  0000 L CNN
 F 1 "100nF" H 8925 2600 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0402" H 8938 2550 50  0001 C CNN
 F 3 "" H 8900 2700 50  0001 C CNN
+F 4 "Wurth Electronics" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "885012105016" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "710-885012105016" H 0   0   50  0001 C CNN "Mouser No"
 	1    8900 2700
 	1    0    0    -1  
 $EndComp
@@ -658,6 +725,9 @@ F 0 "U1" H 5950 4250 60  0000 C CNN
 F 1 "Si4010-GT" H 5750 2900 60  0000 C CNN
 F 2 "Housings_SSOP:MSOP-10_3x3mm_Pitch0.5mm" H 5450 3000 60  0001 C CNN
 F 3 "" H 5450 3000 60  0001 C CNN
+F 4 "Silicon Labs" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "SI4010-C2-GT" H 0   0   50  0001 C CNN "Mfr. No"
+F 6 "634-SI4010-C2-GT" H 0   0   50  0001 C CNN "Mouser No"
 	1    5400 3550
 	1    0    0    -1  
 $EndComp
