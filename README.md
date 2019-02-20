@@ -23,7 +23,7 @@ still under development. See hardware/README.md for more information.
 ## Receiver
 I currently use a RFM22B module from modtronicsaustralia.com connected to a
 Raspberry Pi. This is a Si4430 based transceiver module. For the source code of
-the receiving program see the src/si443x_sensof directory.
+the receiving program see the software/si443x_sensof directory.
 
 # Sensof Frame Format
 The Sensof frames are compatible with the Si4430/EZRadioPro receiver, and have

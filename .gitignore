@@ -1,2 +1,41 @@
-hardware/builds/
-hardware/datasheets/
+#
+# Default Non-versioned directories
+#
+_builds/
+_datasheets/
+_old/
+
+#
+# KiCad files
+# For PCBs designed using KiCad: http://www.kicad-pcb.org/
+# Format documentation: http://kicad-pcb.org/help/file-formats/
+#
+hardware/**/*.000
+hardware/**/*.bak
+hardware/**/*.bck
+hardware/**/*.kicad_pcb-bak
+hardware/**/*~
+hardware/**/_autosave-*
+hardware/**/*.tmp
+hardware/**/*-cache.lib
+hardware/**/*-rescue.lib
+hardware/**/*-save.pro
+hardware/**/*-save.kicad_pcb
+# Netlist files (exported from Eeschema)
+hardware/**/*.net
+# Autorouter files (exported from Pcbnew)
+hardware/**/*.dsn
+hardware/**/*.ses
+# Exported BOM files
+hardware/**/*.xml
+hardware/**/*.csv
+
+#
+# Software build directories
+#
+software/**/build/
+
+#
+# FreeCad backup files
+#
+mechanical/**/*.fcstd1
