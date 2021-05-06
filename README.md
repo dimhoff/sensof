@@ -1,5 +1,8 @@
 # Sensof
-Si4010 based wireless sensors(temperature, humidity, etc.) firmware and utilities
+Si4010 based wireless sensors(temperature, humidity, etc.) firmware and utilities.
+
+**Project status**: This project is not actively maintained other then some
+minor fixes to keep it working for myself.
 
 # Sensof-HT
 Sensof-HT is a temperature and humidity sensor that is build using a Si4010 MCU
@@ -20,10 +23,23 @@ internet. These only need to be connected together and connected to a battery.
 This repository also contains a custom Sensof-HT PCB. However this is currently
 still under development. See hardware/README.md for more information.
 
+## RF communication
+The system uses the following modulation/encoding settings:
+
+- Modulation: FSK
+- Center Freq: 433.92 MHz
+- FSK Deviation: 59 kHz
+- Data rate: 9.6 kbits/s
+- Encoding: NRZ Only (eg. no encoding)
+
 ## Receiver
-I currently use a RFM22B module from modtronicsaustralia.com connected to a
-Raspberry Pi. This is a Si4430 based transceiver module. For the source code of
-the receiving program see the software/si443x_sensof directory.
+I use a RFM22B module, which is based on the Si4430 transceiver,
+connected to a Raspberry Pi for receiving the signal. The source code of the
+receiving program is available in the software/si443x_sensof directory.
+
+I also did some experiments with a SX1231 based module. Which seem to have a
+better reception. I don't have any example code for this available in the
+source tree.
 
 # Sensof Frame Format
 The Sensof frames are compatible with the Si4430/EZRadioPro receiver, and have
